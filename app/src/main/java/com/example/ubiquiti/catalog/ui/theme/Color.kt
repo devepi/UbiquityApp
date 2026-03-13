@@ -57,7 +57,7 @@ object Theme {
   object Corners {
     val medium = RoundedCornerShape(22.dp)
 
-    fun medium(isFirst: Boolean, isLast: Boolean) = RoundedCornerShape(
+    fun medium(isFirst: Boolean = false, isLast: Boolean = false) = RoundedCornerShape(
       topStart = if (isFirst) medium.topStart else CornerSize(0.dp),
       topEnd = if (isFirst) medium.topEnd else CornerSize(0.dp),
       bottomStart = if (isLast) medium.bottomStart else CornerSize(0.dp),

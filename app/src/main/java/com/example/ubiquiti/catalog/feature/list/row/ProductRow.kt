@@ -60,7 +60,7 @@ fun ProductRow(
       ) {
         SubcomposeAsyncImage(
           model = ImageRequest.Builder(LocalContext.current)
-            .data(product.imagePath)
+            .data(product.thumbPath)
             .crossfade(true)
             .build(),
           loading = {

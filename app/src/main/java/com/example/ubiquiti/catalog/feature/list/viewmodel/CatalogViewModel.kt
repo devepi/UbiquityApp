@@ -48,7 +48,6 @@ class CatalogViewModel @Inject constructor(
     get() = _filter.isEmpty
 
   init {
-    Log.i("CatalogViewModel", "============ init")
     fetch()
   }
 
@@ -110,8 +109,6 @@ class CatalogViewModel @Inject constructor(
             clear()
             addAll(allLines)
           }
-
-          Log.i("CatalogViewModel", "============ filter: $_productLines")
 
           _filter = _filter.copy(allLines = _productLines)
 

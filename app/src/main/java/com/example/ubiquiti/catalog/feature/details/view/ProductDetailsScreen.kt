@@ -22,6 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.ubiquiti.catalog.core.model.Product
+import com.example.ubiquiti.catalog.feature.details.row.ImageRow
 import com.example.ubiquiti.catalog.feature.details.row.InfoRow
 import com.example.ubiquiti.catalog.ui.shared.button.BackButton
 import com.example.ubiquiti.catalog.ui.theme.Theme
@@ -74,10 +75,10 @@ fun ProductDetailsScreen(
               horizontal = Theme.Spacing.large,
             )
         ) {
+          ImageRow(product)
           InfoRow(
             title = "Product Line",
             description = product.line?.name ?: "",
-            isFirst = true,
           )
           HorizontalDivider(color = Theme.Colors.rowDivider)
           InfoRow(

@@ -50,8 +50,6 @@ fun ProductLineDialog(
       val allLines = success?.filter?.allLines ?: listOf()
       val selectedLines = success?.filter?.selectedLines ?: listOf()
 
-      Log.i("ProductLineDialog", "============ allLines: ${viewModel.filter.allLines.size}")
-
       LazyColumn(
         Modifier.background(Color.Transparent)
       ) {
